@@ -1,0 +1,15 @@
+<% if(success && success.length) {%>
+    <!-- //success will always be passed as we are using the res.local but only if the route calls res.flash then only the
+   // success array have length -->
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= success %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+
+        <% if(error && error.length) {%>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <%= error %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <% } %>
